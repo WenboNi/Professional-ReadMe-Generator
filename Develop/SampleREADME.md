@@ -1,8 +1,8 @@
 
-  # sadfds
+  # Password Generator
 
   ## Description
-  asdfsdfd
+  This project was deployed to help users generate a strong password that meets the criteria/requirements of the sign-up portal on many websites
   
   ## Table of Contents
   - [Installation](#Installation)
@@ -14,20 +14,20 @@
   - [GitHub](#Github)
   
   ## Installation
-  dsfsd
+  Go to https://wenboni.github.io/Password-Generator/and input answers in the prompt windows that appear
   
   ## Usage
-  dsdd
+  follow prompts and input answers and then click generate pasword
   
   ## License
   ![License](https://img.shields.io/badge/License-MIT-green.svg)
   This project is licensed under the MIT License.
   
   ## Contributing
-  ddsd
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript
   
   ## Tests
-  sdsd
+  N/A
   
   ## Questions
   Should you have any questions, please reach out to me at wenboni@yahoo.com.
