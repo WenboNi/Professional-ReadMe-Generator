@@ -55,55 +55,20 @@ const questions = [
   
 // TODO: Create a function to write README file
 function generateREADME(data) {
-    return `
-    # ${data.title}
-
-    ## Description
-    ${data.description}
-    
-    ## Table of Contents
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [License](#license)
-    - [Credits/References](#credits)
-    - [Tests](#tests)
-    - [Questions](#questions)
-    - [GitHub](#github)
-    
-    ## Installation
-    ${data.installation}
-    
-    ## Usage
-    ${data.usage}
-    
-    ## License
-    [![${data.license} License](https://img.shields.io/badge/License-${data.license}-blue.svg)](https://opensource.org/licenses/${data.license})
-    This project is licensed under the ${data.license} License.
-    
-    ## Contributing
-    ${data.credits}
-    
-    ## Tests
-    ${data.testing}
-    
-    ## Questions
-    Should you have any questions, please reach our to me at ${data.email}.
-
-    ## GitHub Link
-    Feel free to view my other projects and repos via https://github.com/${data.github}.`
+    const readmeContent = generateMarkdown(data);
+    fs.writeFile('SampleREADME.md', readmeContent, (error) => {
+        if (error) {
+            console.log(error);
+        } else {
+            console.log('README file has been succesfully created!');
+        }
+    });
 };
 
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions).then((answers) => {
-        const readmeContent = generateMarkdown(answers);
-        fs.writeFile('NewREADME.md', readmeContent, (error) => {
-            if (error) {
-                console.log(error);
-            } else {
-                console.log('README file has been succesfully created!');
-            }
-        });
+        generateREADME(answers);
     });
 }
 

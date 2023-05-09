@@ -52,7 +52,7 @@ function generateMarkdown(data) {
   ${data.usage}
   
   ## License
-  [![${data.license} License](https://img.shields.io/badge/License-${data.license}-blue.svg)](https://opensource.org/licenses/${data.license})
+  ${renderLicenseBadge(data.license)}
   This project is licensed under the ${data.license} License.
   
   ## Contributing
@@ -62,7 +62,7 @@ function generateMarkdown(data) {
   ${data.testing}
   
   ## Questions
-  Should you have any questions, please reach our to me at ${data.email}.
+  Should you have any questions, please reach out to me at ${data.email}.
 
   ## GitHub Link
   Feel free to view my other projects and repos via https://github.com/${data.github}.`
